@@ -4,6 +4,23 @@ html, body {
     height:100%;
   }
   
+  .logo{
+
+      font-size: 72px;
+      background: -webkit-linear-gradient(-45deg,#cc2ec9, #e73c7e, #23a6d5, #23d5ab);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+  .navbartext{
+    background: -webkit-linear-gradient(-45deg,#cc2ec9, #e73c7e, #23a6d5, #23d5ab);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .icons {
+    background: -webkit-linear-gradient(-45deg,#cc2ec9, #e73c7e, #23a6d5, #23d5ab);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   header {
       background: linear-gradient(-45deg, #cc2ec9, #e73c7e, #23a6d5, #23d5ab);
       background-size: 400% 400%;
@@ -24,6 +41,19 @@ html, body {
 
 
   body{margin-top:20px;}
+  /* If the screen size is 1200px wide or more, set the font-size to 80px */
+@media (max-width: 991px) {
+  .responsive-font  {
+    margin-top: 40px;
+
+  }
+}
+/* If the screen size is smaller than 1200px, set the font-size to 80px */
+@media ( min-width: 767px) {
+  .responsive-font {
+    font-size: 18px;
+  }
+}
 
 @media (max-width: 991px) {
   .about-text {
@@ -52,49 +82,8 @@ html, body {
 .about-text p {
   font-size: 18px;
 }
-.about-text p mark {
-  font-weight: 600;
-  color: #3a3973;
-}
-.about-text .btn-bar {
-  padding-top: 8px;
-}
-.about-text .btn-bar a {
-  min-width: 150px;
-  text-align: center;
-  margin-right: 10px;
-}
 
-.about-list {
-  padding-top: 10px;
-}
-.about-list .media {
-  padding: 5px 0;
-}
-.about-list label {
-  color: #3a3973;
-  font-weight: 600;
-  width: 88px;
-  margin: 0;
-  position: relative;
-}
-.about-list label:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 11px;
-  width: 1px;
-  height: 12px;
-  background: #3a3973;
-  -moz-transform: rotate(15deg);
-  -o-transform: rotate(15deg);
-  -ms-transform: rotate(15deg);
-  -webkit-transform: rotate(15deg);
-  transform: rotate(15deg);
-  margin: auto;
-  opacity: 0.5;
-}
+
 .about-list p {
   margin: 0;
   font-size: 15px;
@@ -104,6 +93,7 @@ html, body {
   box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.06);
   padding: 10px;
   background: #ffffff;
+  
 }
 @media (max-width: 991px) {
   .about-img {
@@ -126,54 +116,17 @@ html, body {
 .counter-section p {
   font-weight: 500;
   margin: 0;
-  color: #fe4f6c;
+  color: #e74fe9;
 }
 .theme-color {
-    color: #fe4f6c;
+    color: #e74fe9;
 }
 
 .section {
     padding: 100px 0;
     position: relative;
 }
-.gray-bg {
-    background-color: #ebf4fa;
-}
-.px-btn.theme {
-    background: #fe4f6c;
-    color: #ffffff;
-    border: 2px solid #fe4f6c;
-}
-.px-btn {
-    padding: 0 20px;
-    line-height: 42px;
-    border: 2px solid transparent;
-    position: relative;
-    display: inline-block;
-    background: none;
-    border: none;
-    -moz-transition: ease all 0.35s;
-    -o-transition: ease all 0.35s;
-    -webkit-transition: ease all 0.35s;
-    transition: ease all 0.35s;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 500;
-}
 
-.px-btn.theme-t {
-    background: transparent;
-    border: 2px solid #fe4f6c;
-    color: #fe4f6c;
-}
-
-
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  }
 
   
   .skills-section{
@@ -271,7 +224,7 @@ html, body {
   transition: .5s;
   }
   
-  .skills-img:after{
+  .skills-img:before{
   content: '';
   position:absolute;
   top:0;
@@ -310,7 +263,7 @@ html, body {
   overflow: hidden;
 }
 
-.containerr:before {
+.containerr:before{
   content: '';
   position: absolute;
   top: 0;
@@ -359,8 +312,18 @@ html, body {
 .timeline-content {
   width: 95%;
   padding: 0 15px;
-  color: #666
+  color: #666;
+  animation: ti1 7s ease-in infinite;
+ 
+  
 }
+
+
+@keyframes ti1 {
+  from { width: 95% }
+  to { width: 80% }
+}
+
 
 .timeline-content h3 {
   margin-top: 5px;
@@ -399,4 +362,47 @@ html, body {
      float: none;
      direction: ltr;
   }
+}
+
+/* projects section*/
+.container1 {
+  position: relative;
+  width: 250px;
+}
+
+.image1 {
+  display:inline;
+  width: 100%;
+  height: auto;
+}
+
+.overlay1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: -webkit-linear-gradient(-45deg,#cc2ec9, #e73c7e, #23a6d5, #23d5ab);
+  opacity:0.9;
+  overflow: hidden;
+  width: 0;
+  height: 250px;
+  transition: .5s ease;
+  border-radius: 50%;
+}
+
+.container1:hover .overlay1 {
+  width: 250px;
+}
+
+.text1 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
 }
