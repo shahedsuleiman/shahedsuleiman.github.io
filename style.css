@@ -40,20 +40,24 @@ html, body {
   }
 
 
-  body{margin-top:20px;}
+  /* body{margin-top:20px;} */
   /* If the screen size is 1200px wide or more, set the font-size to 80px */
-@media (max-width: 991px) {
+/* @media (min-width: 544px) {
   .responsive-font  {
-    margin-top: 40px;
+    font-size:1.5rem;
 
   }
-}
+} */
 /* If the screen size is smaller than 1200px, set the font-size to 80px */
-@media ( min-width: 767px) {
+@media ( max-width: 767x) {
   .responsive-font {
-    font-size: 18px;
+    grid-template-columns:1fr;
+    font-size: 1.2em;
   }
 }
+
+
+
 
 @media (max-width: 991px) {
   .about-text {
